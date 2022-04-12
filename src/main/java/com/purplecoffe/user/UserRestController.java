@@ -50,7 +50,7 @@ public class UserRestController {
 	
 	/**
 	 * 로그인이메일 중복확인
-	 * @param loginEmail
+	 * @param email
 	 * @return
 	 */
 	@RequestMapping("/is_duplicated_email")
@@ -70,7 +70,7 @@ public class UserRestController {
 	
 	/**
 	 * 로그인
-	 * @param loginEmail
+	 * @param email
 	 * @param password
 	 * @param request
 	 * @return

@@ -49,33 +49,36 @@
 </html>
 
 <script>
-$(documnet).ready(function() {
-
-	// 로그인
-	$('#loginForm').submit(function(e) {
-		e.preventDefault();
+$(document).ready(function() {
+	$('#loginForm').on('submit', function(e) {
+		e.preventDefault();	// submit 수행 중단
 		
+		// validation
 		var email = $('input[name=email]').val().trim();
 		if (email == '') {
 			alert("이메일을 입력해주세요.");
-			return;
+			return false;
 		}
 		
 		var password = $('input[name=password]').val();
 		if (password == '') {
 			alert("비밀번호를 입력해주세요.");
-			return;
+			return false;
 		}
 		
-		$.post(url, data)
-		.done(function(data)) {
-			if (data.result == "success"){
-				location.href="template/layout";
+		// submit X ajax O
+		let url = $(this).attr('action');
+		let params = $(this).serialize();
+		
+		$.post(url, params)
+		.done(function(data) {
+			if (data.result == "success") {
+				alert("퍼플커피 회원님! 환영합니다!");
+				location.href="/main/main_view";
 			} else {
-				alert(data.error_message);
+				alert("로그인에 실패했습니다. 다시 시도해주세요.");
 			}
-			
-		}
+		});
 	});
 });
 </script>
