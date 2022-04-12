@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+a:link {color:black;}
+a:visited {color:black;}
+
+header {height:100px; background-color:#ba55d3;}
+
+nav {height:50px;}
+
+.banner {height:500px;}
+.insta {height:180px;}
+
+footer {height:100px; background-color:#ba55d3;}
+
+.title {height:50px; background-color:#ba55d3;}
+
+#emailCheckBtn {width:100px; color:white; background-color:#ba55d3;}
+
+#signUpBtn {color:white; background-color:#ba55d3;}
+
+.loginPageBg {width:1000px; height:300px; background-color:#ba55d3;}
+.circle {width:200px; height:200px; border-radius:50%; background-color:#945050;
+font-size:25px; text-align:center; line-height:200px;}
+
+.loginBtn {color:white; background-color:#ba55d3;}
