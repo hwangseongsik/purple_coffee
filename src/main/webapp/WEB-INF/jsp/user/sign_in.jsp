@@ -73,8 +73,8 @@ $(document).ready(function() {
 		$.post(url, params)
 		.done(function(data) {
 			if (data.result == "success") {
-				alert("퍼플커피 회원님! 환영합니다!");
-				location.href="/main/main_view";
+				alert("환영합니다!");
+				location.href="/main/main_after_view";
 			} else {
 				alert("로그인에 실패했습니다. 다시 시도해주세요.");
 			}

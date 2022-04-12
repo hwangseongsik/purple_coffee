@@ -3,7 +3,8 @@
 a:link {color:black;}
 a:visited {color:black;}
 
-header {height:100px; background-color:#ba55d3;}
+header {height:100px; background-color:#ba55d3;} 
+.logo:hover {text-decoration:none;}
 
 nav {height:50px;}
 

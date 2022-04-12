@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <div>
-	<h1 class="text-white text-center"><a href="#" class="text-white">PURPLE COFFEE</a></h1>
+	<h1 class="text-white text-center"><a href="/main/main_view" class="text-white logo">PURPLE COFFEE</a></h1>
 	<div class="d-flex float-right mt-3 text-white">
 		<a href="/user/sign_in_view" class="text-white mx-1">로그인</a>
 		|

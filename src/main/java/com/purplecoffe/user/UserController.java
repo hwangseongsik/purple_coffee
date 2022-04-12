@@ -1,5 +1,8 @@
 package com.purplecoffe.user;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,5 +33,17 @@ public class UserController {
 		return "user/sign_in";
 	}
 	
-	
+	/**
+	 * 로그아웃
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping("/sign_out")
+	public String signOut(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.removeAttribute("userEmail");
+		session.removeAttribute("userName");
+		session.removeAttribute("userId");
+		return "redirect:/main/main_view";
+	}
 }

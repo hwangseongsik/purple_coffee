@@ -15,7 +15,7 @@
 	<div id="wrap" class="container">
 		<header>
 			<div>
-				<h1 class="text-white text-center"><a href="#" class="text-white">PURPLE COFFEE</a></h1>
+				<h1 class="text-white text-center"><a href="/main/main_after_view" class="text-white logo">PURPLE COFFEE</a></h1>
 				<div class="d-flex float-right mt-3 text-white">
 					<a href="#" class="text-white mx-1">매장찾기</a>
 					|
@@ -23,7 +23,7 @@
 					|
 					<a href="/coupon/coupon_view" class="text-white mx-1">내쿠폰</a>
 					ㅣ
-					<a href="/user/sign_out_view" class="text-white mx-1">로그아웃</a>
+					<a href="/user/sign_out" class="text-white mx-1">로그아웃</a>
 				</div>
 			</div>
 		</header>

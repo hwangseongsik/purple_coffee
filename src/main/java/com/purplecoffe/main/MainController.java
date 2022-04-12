@@ -9,6 +9,11 @@ public class MainController {
 
 	@RequestMapping("/main_view")
 	public String mainView() {
+		return "template/layout";
+	}
+	
+	@RequestMapping("/main_after_view")
+	public String mainAfterView() {
 		return "template/after_layout";
 	}
 }
