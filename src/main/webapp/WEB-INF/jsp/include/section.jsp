@@ -8,5 +8,5 @@
 	<h5>PURPLE COFFEE SNS</h5>
 	<span>ㅡ</span>
 	<br>
-	<a href="#">instagram.com/coffeepurple</a>
+	<a href="instagram.com">instagram.com/coffeepurple</a>
 </div>

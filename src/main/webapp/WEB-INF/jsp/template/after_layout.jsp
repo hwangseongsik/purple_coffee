@@ -17,9 +17,9 @@
 			<div>
 				<h1 class="text-white text-center"><a href="/main/main_after_view" class="text-white logo">PURPLE COFFEE</a></h1>
 				<div class="d-flex float-right mt-3 text-white">
-					<a href="#" class="text-white mx-1">매장찾기</a>
+					<a href="/map/map_find_view" class="text-white mx-1">매장찾기</a>
 					|
-					<a href="#" class="text-white mx-1">VOC</a>
+					<a href="/voc/voc_create_view" class="text-white mx-1">VOC</a>
 					|
 					<a href="/coupon/coupon_view" class="text-white mx-1">내쿠폰</a>
 					ㅣ
@@ -43,7 +43,7 @@
 <script>
 	$(document).ready(function() {
 		// 배너사진 여러개
-		let bannerList = ["../images/banner1.png", "../images/banner2.png", "../images/banner3.png"];
+		let bannerList = ["/pictures/banner1.png", "/pictures/banner2.png", "/pictures/banner3.png"];
 		let currentImageIndex = 0;
 		setInterval(function() {
 			$("#bannerImage").attr("src", bannerList[currentImageIndex]);
