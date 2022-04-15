@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.purplecoffe.voc.dao.VocDAO">
+	<select id="selectVocListByUserId" resultType="com.purplecoffe.voc.model.Voc">
+		SELECT
+			`id`
+			,`userId`
+			,`subject`
+			,`content`
+			,`createdAt`
+			,`updatedAt`
+		FROM
+			`voc`
+		WHERE
+			`userId` = #{userId}
+		<!-- 페이징 아닐 때 -->
+		<if test="direction == null">
+		ORDER BY `id` DESC
+		</if>
+		<!-- 이전 -->
+		<if test="direction == 'prev'">
+			<![CDATA[
+			AND `id` > #{standardId}
+			]]>
+		ORDER BY `id` ASC
+		</if>
+		<!-- 다음 -->
+		<if test="direction == 'next'">
+			<![CDATA[
+			AND `id` < #{standardId}
+			]]>
+		ORDER BY `id` DESC
+		</if>
+		LIMIT ${limit}
+	</select>
+	
+	<select id="selectVocIdByUserIdAndSort" parameterType="map" resultType="int">
+		SELECT
+			`id`
+		FROM
+			`voc`
+		WHERE
+			`userId` = #{userId}
+		ORDER BY `id` ${sort}
+		LIMIT 1
+	</select>
+	
+	<select id="selectVocById" parameterType="integer" resultType="com.purplecoffe.voc.model.Voc">
+		SELECT
+			`id`
+			,`userId`
+			,`subject`
+			,`content`
+			,`createdAt`
+			,`updatedAt`
+		FROM
+			`voc`
+		WHERE
+			`id` = #{vocId}
+	</select>
+	
+	<insert id="insertVoc" parameterType="map">
+		INSERT INTO `voc`
+		(
+			`userId`
+			,`subject`
+			,`content`
+			,`createdAt`
+			,`updatedAt`
+		)
+		VALUES
+		(
+			#{userId}
+			, #{subject}
+			, #{content}
+			, NOW()
+			, NOW()
+		)	
+	</insert>
+	
+	<delete id="deleteVoc" parameterType="map">
+		DELETE
+		FROM
+			`voc`
+		WHERE
+			`id` = #{vocId}
+			AND `userId` = #{userId}
+	</delete>
+</mapper>

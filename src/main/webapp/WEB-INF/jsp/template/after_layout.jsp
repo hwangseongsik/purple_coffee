@@ -19,7 +19,7 @@
 				<div class="d-flex float-right mt-3 text-white">
 					<a href="/map/map_find_view" class="text-white mx-1">매장찾기</a>
 					|
-					<a href="/voc/voc_create_view" class="text-white mx-1">VOC</a>
+					<a href="/voc/voc_list_view" class="text-white mx-1">VOC</a>
 					|
 					<a href="/coupon/coupon_view" class="text-white mx-1">내쿠폰</a>
 					ㅣ

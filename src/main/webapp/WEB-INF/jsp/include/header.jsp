@@ -6,8 +6,8 @@
 	<div class="d-flex float-right mt-3 text-white">
 		<a href="/user/sign_in_view" class="text-white mx-1">로그인</a>
 		|
-		<a href="#" class="text-white mx-1">매장찾기</a>
+		<a href="/map/map_find_view" class="text-white mx-1">매장찾기</a>
 		|
-		<a href="#" class="text-white mx-1">VOC</a>
+		<a href="/voc/voc_list_view" class="text-white mx-1">VOC</a>
 	</div>
 </div>
