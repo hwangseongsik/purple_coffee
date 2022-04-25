@@ -63,9 +63,12 @@ public class VocController {
 	public String vocCreateView(Model model) {
 		
 		model.addAttribute("viewName", "voc/voc_create");
+		 
+		
 		
 		return "voc/voc_create";
 	}
+	
 	
 	@RequestMapping("/voc_detail_view")
 	public String vocDetailView(
@@ -75,6 +78,6 @@ public class VocController {
 		model.addAttribute("voc", voc);
 		
 		model.addAttribute("viewName", "voc/voc_detail");
-		return "voc/voc_detail";
+		return "voc/voc_detail"; 
 	}
-}
+} 
